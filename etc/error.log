@@ -1,0 +1,23 @@
+2016/03/09 23:48:00 [error] 4505#0: *1 open() "/home/stria/Dropbox/PyDev_projects/nginx_tr/home/web/public/1.txt" failed (13: Permission denied), client: 127.0.0.1, server: , request: "HEAD /1.txt HTTP/1.1", host: "localhost"
+2016/03/09 23:48:00 [info] 4505#0: *1 client 127.0.0.1 closed keepalive connection
+2016/03/10 00:17:28 [error] 5414#0: *1 open() "/home/stria/Dropbox/PyDev_projects/nginx_tr/home/web/public/1.txt" failed (13: Permission denied), client: 127.0.0.1, server: , request: "HEAD /1.txt HTTP/1.1", host: "localhost"
+2016/03/10 00:17:28 [info] 5414#0: *1 client 127.0.0.1 closed keepalive connection
+2016/03/10 00:17:36 [error] 5414#0: *2 open() "/home/stria/Dropbox/PyDev_projects/nginx_tr/home/web/public/1.txt" failed (13: Permission denied), client: 127.0.0.1, server: , request: "HEAD /1.txt HTTP/1.1", host: "localhost"
+2016/03/10 00:17:36 [info] 5414#0: *2 client 127.0.0.1 closed keepalive connection
+2016/03/10 00:29:02 [info] 5414#0: *3 client 127.0.0.1 closed keepalive connection
+2016/03/10 00:33:20 [error] 5414#0: *4 open() "/home/stria/Dropbox/PyDev_projects/nginx_tr/home/web/public/1.txt" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "HEAD /1.txt HTTP/1.1", host: "localhost"
+2016/03/10 00:33:20 [info] 5414#0: *4 client 127.0.0.1 closed keepalive connection
+2016/03/10 00:33:28 [info] 5414#0: *5 client 127.0.0.1 closed keepalive connection
+2016/03/10 00:33:46 [info] 5414#0: *6 client 127.0.0.1 closed keepalive connection
+2016/03/10 00:52:40 [error] 5414#0: *7 open() "/home/stria/Dropbox/PyDev_projects/nginx_tr/home/web/public/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/?a=1&a=2&b=3"
+2016/03/10 00:52:57 [info] 5414#0: *8 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
+2016/03/12 14:15:32 [error] 1102#0: *1 "/usr/share/nginx/html/question/<123>/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /question/%3C123%3E/ HTTP/1.1", host: "127.0.0.1"
+2016/03/12 14:15:34 [error] 1102#0: *1 open() "/home/stria/Dropbox/PyDev_projects/nginx_tr/home/web/public/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/question/%3C123%3E/"
+2016/03/12 14:15:45 [info] 1102#0: *2 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
+2016/03/12 14:15:45 [error] 1102#0: *1 "/usr/share/nginx/html/question/12/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /question/12/ HTTP/1.1", host: "127.0.0.1"
+2016/03/12 14:16:11 [info] 1102#0: *3 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
+2016/03/12 14:16:12 [info] 1102#0: *4 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
+2016/03/12 14:16:12 [info] 1102#0: *5 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
+2016/03/12 14:16:12 [error] 1102#0: *1 "/usr/share/nginx/html/question/123/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: , request: "GET /question/123/ HTTP/1.1", host: "127.0.0.1"
+2016/03/12 14:17:12 [info] 1102#0: *6 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
+2016/03/12 14:17:12 [info] 1102#0: *7 client timed out (110: Connection timed out) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
