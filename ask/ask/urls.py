@@ -19,7 +19,7 @@ from django.conf.urls import include
 admin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', 'qa.views.test'),
+    url(r'^/$', 'qa.views.test'),
     url(r'^login/.*$', 'qa.views.test'),
     url(r'^signup/.*$', 'qa.views.test'),
     url(r'^question/([0-9]+).*$', 'qa.views.test'),
