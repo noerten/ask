@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'qa'
+    'qa',
+    'autofixture'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -78,9 +79,9 @@ WSGI_APPLICATION = 'ask.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myproject',
-        'USER': 'enth',
-        'PASSWORD': 'password',
+        'NAME': 'stepic',
+        'USER': 'trasea',
+        'PASSWORD': 'trasea',
         'HOST': 'localhost',
         'PORT': '',
     }
