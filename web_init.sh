@@ -1,6 +1,7 @@
 sudo ln -sf /home/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
 sudo rm /etc/nginx/sites-enabled/default
-
+sudo rm /usr/bin/python2.7
+sudo ln -sf /usr/bin/python3.4 /usr/bin/python2.7
 sudo apt-get update
 sudo apt-get install libmysqlclient-dev
 sudo apt-get install python3-dev python-dev libxml2-dev libxslt1-dev zlib1g-dev
