@@ -1,28 +1,13 @@
-<h1>{{ question.title }} rating {{ question.rating }}</h1>
-<p>by {{ question.author }} added {{ question.added_at }}</p>
+<div class="row">
+        {{ question.title }}
+    </div>
 
-<p>{{ question.text }}</p>
-
-<h1>Answers</h1>
-{% for answer in answers %}
-    <p>by {{ answer.author }} added {{ answer.added_at }}</p>
-    <p>{{ answer.text }}</p>
-{% endfor %}
-
-{{ form.non_field_errors }}
     {% for e in form.non_field_errors %}
         <div class="alert alert-danger">{{ e }}</div>
     {% endfor %}
+    <form method="post" action="{% url 'ask' %}">
 
-    <form method="post" action="{% url 'answer_add' %}">
-
-
-        {% for hidden in form.hidden_fields %}
-            {{ hidden }}
-        {% endfor %}
-
-
-        {% for field in form.visible_fields %}
+        {% for field in form %}
             {% if field.errors %}
                 <div class="alert alert-danger">{{ field.errors }}</div>
             {% endif %}
@@ -43,3 +28,5 @@
             <button type="submit" class="btn btn-primary">Сохранить</button>
         </div>
     </form>
+
+
