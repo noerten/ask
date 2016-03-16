@@ -1,26 +1,21 @@
 {% if questions %}
     <ul>
     {% for question in questions %}
-        <li>{{ question.title }}<a href="/question/{{ question.id }}/">{{ question.text }}</a></li>
+        <li><a href="/question/{{ question.id }}/">{{ question.title }}</a>{{ question.text }}</li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
-
-<div class="pagination">
-    <span class="step-links">
-        {% if questions.has_previous %}
-            <a href="?page={{ questions.previous_page_number }}">previous</a>
+<nav><ul class="pagination">
+    {% for p in paginator.page_range %}
+        {% if p.number == page.number %}
+            <li class="active">
+        {% else %}
+            <li>
         {% endif %}
-
-        <span class="current">
-            Page {{ questions.number }} of {{ questions.paginator.num_pages }}.
-        </span>
-
-        {% if questions.has_next %}
-            <a href="?page={{ questions.next_page_number }}">next</a>
-        {% endif %}
-    </span>
-</div>
-
+            <a href="{{ paginator.baseurl }}?page={{ p }}">
+            {{ p }}</a>
+            </li>
+    {% endfor %}
+    </ul></nav>
