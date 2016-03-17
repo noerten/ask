@@ -38,15 +38,18 @@ def popular(request):
 
 @require_GET
 def questions(request, question_id):
-    question = get_object_or_404(Question, id=question_id)
-    answers = Answer.objects.filter(question=question)
-    form = AnswerForm(initial={'question': question.id})
-    return render(request, 'questions/question.html', {
-        "question": question,
-        "answers": answers.all(),
-        "form": form,
-        "title": "Question detail"
-    })
+    if request.method is 'POST':
+        return answer_add(request)
+    else:
+        question = get_object_or_404(Question, id=question_id)
+        answers = Answer.objects.filter(question=question)
+        form = AnswerForm(initial={'question': question.id})
+        return render(request, 'questions/question.html', {
+            "question": question,
+            "answers": answers.all(),
+            "form": form,
+            "title": "Question detail"
+        })
 
 
 def paginate(request, qs):
@@ -85,9 +88,9 @@ def question_add(request):
 def answer_add(request):
     if request.method == "POST":
         form = AnswerForm(request.POST)
-        if form.is_valid():
-            answer = form.save()
-            return HttpResponseRedirect(reverse('question', kwargs={'question_id': answer.question.id}))
+  #      if form.is_valid():
+        answer = form.save()
+        return HttpResponseRedirect(reverse('question', kwargs={'question_id': answer.question.id}))
     else:
         form = AnswerForm()
   #  return render(request, 'questions/answer.html', {
