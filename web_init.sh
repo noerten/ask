@@ -1,10 +1,15 @@
-sudo ln -sf /home/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
+sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
 sudo rm /etc/nginx/sites-enabled/default
 sudo rm /usr/bin/python2.7
 sudo ln -sf /usr/bin/python3.4 /usr/bin/python2.7
 sudo apt-get update
 sudo apt-get install libmysqlclient-dev
 sudo apt-get install python3-dev python-dev libxml2-dev libxslt1-dev zlib1g-dev
+sudo pip install --upgrade pip
+sudo pip install django
+sudo pip install gunicorn
+sudo pip install django-autofixture
+sudo pip install mysqlclient 
 sudo sed -i 's/skip-external-locking/skip-external-locking\ninnodb_use_native_aio = 0/' /etc/mysql/my.cnf
 sudo /etc/init.d/mysql restart
 mysql -uroot -e "create database stepic;"
